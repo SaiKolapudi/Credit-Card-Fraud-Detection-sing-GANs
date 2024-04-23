@@ -1,8 +1,5 @@
 # Enhancing Credit Card Fraud Detection Using GANs
 
-## Course Details
-- Course Name: ADTA 5340 Section 002 - Discovery and Learning with Big Data (Fall 2023 1)
-- Professor: Dr. Leann Boyce
 
 ## Project Overview
 In this project, Meghana Patibandla, Sai Tulasi Kolapudi, and Rakesh Sarma Karra tackle the pervasive issue of credit card fraud. By integrating Generative Adversarial Networks (GANs) into our methodology, we aim to significantly improve the accuracy and reliability of fraud detection mechanisms, thereby bolstering the security framework of financial transactions.

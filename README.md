@@ -1,38 +1,46 @@
 # Enhancing Credit Card Fraud Detection Using GANs
 
-
 ## Project Overview
-In this project, Meghana Patibandla, Sai Tulasi Kolapudi, and Rakesh Sarma Karra tackle the pervasive issue of credit card fraud. By integrating Generative Adversarial Networks (GANs) into our methodology, we aim to significantly improve the accuracy and reliability of fraud detection mechanisms, thereby bolstering the security framework of financial transactions.
+This project addresses the critical issue of credit card fraud by incorporating Generative Adversarial Networks (GANs) to improve the accuracy and reliability of fraud detection systems. The integration of GANs enhances the security framework of financial transactions, providing a robust solution to a growing concern in the financial sector.
 
 ## Dataset
-The dataset employed for this project is accessible at: [Credit Card Fraud Detection Dataset 2023](link_here)
+The Credit Card Fraud Detection Dataset 2023, hosted on [Kaggle](https://www.kaggle.com/datasets/nelgiriyewithana/credit-card-fraud-detection-dataset-2023), is comprised of over 550,000 credit card transactions made by European cardholders. It contains anonymized data to maintain cardholder privacy while providing rich features for analysis. Each transaction is uniquely identified, with 28 anonymized features (V1-V28) that represent various transaction attributes such as time and location, along with the transaction amount ('Amount') and a binary class label ('Class') indicating fraudulent or non-fraudulent transactions. This dataset is invaluable for developing and testing fraud detection algorithms, analyzing merchant category risks, and understanding transaction type vulnerabilities.
+
+### Key Features:
+- **id**: Unique identifier for each transaction.
+- **V1-V28**: Anonymized features that encapsulate diverse transaction attributes.
+- **Amount**: The transaction amount, providing insights into transaction volume.
+- **Class**: Binary classification where '1' indicates a fraudulent transaction and '0' indicates a non-fraudulent transaction.
+
+### Use Cases:
+- **Credit Card Fraud Detection**: Develop machine learning models to detect and preemptively prevent fraud.
+- **Merchant Category Analysis**: Investigate correlations between merchant categories and fraudulent transactions.
+- **Transaction Type Analysis**: Analyze the susceptibility of different transaction types to fraud.
 
 ## Challenge: Class Imbalance
-A significant challenge in credit card fraud detection is the disproportionate ratio of legitimate to fraudulent transactions within datasets. This imbalance can skew machine learning models towards false negatives, undermining the effectiveness of fraud detection.
+The dataset suffers from a severe imbalance with a ratio of approximately 400,000 non-fraudulent to 150,000 fraudulent transactions, initially posing a challenge to accurate fraud detection due to model bias towards the majority class.
 
 ## Solution: Augmented Data for Enhanced Security
-To address the challenge of imbalanced data, we utilized GANs to synthesize realistic fraudulent transactions, thereby achieving a more balanced dataset. This augmentation process not only improves the dataset's diversity but also enhances the models' ability to accurately identify and adapt to emerging fraudulent patterns, leading to a more secure and robust fraud detection system.
+To combat this challenge, the project utilizes GANs to generate synthetic fraudulent transactions, thus balancing the dataset. The augmented dataset enables effective model training and substantially improves detection accuracy.
 
 ## Methodology
+
 ### Data Preprocessing
-We began with thorough data cleaning and standardization to ensure the dataset was optimally prepared for model training.
+Initial steps involved standardizing the 'Amount' feature and converting 'Time' from seconds to hours to reflect transaction trends. Outliers were specifically analyzed as they often represent genuine fraud cases, contributing to more accurate fraud detection.
 
 ### GAN Implementation
-Our team developed GANs capable of generating synthetic fraudulent transactions, effectively mitigating the issue of data imbalance.
+GANs were implemented to generate high-quality synthetic fraudulent transactions. The generator synthesized realistic samples, while the discriminator refined their quality, ensuring the synthetic data closely mimics real transaction patterns.
 
 ### Model Training and Evaluation
-Various machine learning models were trained and evaluated on the augmented dataset. Their performance was measured using metrics such as accuracy, precision, recall, and AUPRC.
+Models deployed include Logistic Regression, Random Forest, XGBoost, KNN, Naive Bayes, SVM, and Decision Trees. These models were evaluated using metrics such as accuracy, precision, recall, and AUPRC (Area Under the Precision-Recall Curve), ensuring robust validation of the models' effectiveness.
 
 ## Key Findings
-Integrating GAN-generated synthetic data proved crucial in enhancing the detection capabilities of our fraud detection models. This approach not only addresses the challenge of imbalanced data but also contributes significantly to the security of financial transaction systems by improving the accuracy and adaptability of fraud detection algorithms.
+- **Model Efficacy**: Advanced models like Random Forest, XGBoost, and Decision Trees demonstrated high efficacy, with perfect scores in accuracy, precision, and recall.
+- **Importance of Outliers**: Including outliers in the analysis significantly enhanced the detection of fraudulent transactions.
+- **Effectiveness of GANs**: The use of GANs for data augmentation was pivotal in balancing the dataset and improving the performance of machine learning models.
 
 ## Future Directions
-We plan to extend our research by testing our models on a wider array of datasets and exploring the integration of our solutions into real-time fraud detection systems. Enhancing the models' explainability and transparency remains a key objective.
-
-## Team Contributions
-- Meghana Patibandla: Led data analysis, preprocessing, and the enhancement of Logistic Regression and SVM models.
-- Sai Tulasi Kolapudi: Pioneered the development of GANs for data augmentation and contributed to the advancement of Random Forest and Naive Bayes models.
-- Rakesh Sarma Karra: Specialized in evaluating XGBoost, KNN, and Decision Trees models, and oversaw project documentation and data privacy compliance.
+Future work will involve further validation of the models on diverse datasets and integration into real-time fraud detection systems. A continuous focus will be maintained on enhancing the models' explainability and transparency, essential for deploying in sensitive environments.
 
 ## Acknowledgments
-Special thanks to Dr. Leann Boyce for her invaluable guidance and expertise, which were instrumental in the success of this project.
+We acknowledge the guidance and expertise provided by industry experts, which have been instrumental in advancing this project.
